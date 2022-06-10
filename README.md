@@ -15,13 +15,21 @@ The module challenge is the afternoon project or assignment that students work t
 
 This challenge focuses on both scope and closures.
 
-In this challenge you will be working to build a `scoreboard` (in the console) that takes randomly generated data and keeps track of a game's progress. If you're not familiar with the rules of baseball what you need to know is this: there are 9 innings and teams take turns "at-bat." Teams can only score while they are at bat. A team stops being at bat once they have gotten 3 `outs` by either striking out or through game play. You can read more about baseball rules [here](https://www.rulesofsport.com/sports/baseball.html).
+In this challenge you will be working to build a `scoreboard` (in the console)
+that takes randomly generated data and keeps track of a game's progress. If
+you're not familiar with the rules of baseball what you need to know is this:
+there are 9 innings and teams take turns "at-bat." Teams can only score while
+they are at bat. A team stops being at bat once they have gotten 3 `outs` by
+either striking out or through game play. You can read more about baseball
+rules [here](https://www.rulesofsport.com/sports/baseball.html).
 
-A scoreboard in a major league stadium looks something like this. In fact, the scoreboard at Fenway Park in Boston is actually quite famous. 
+A scoreboard in a major league stadium looks something like this. In fact, the scoreboard at Fenway Park in Boston is actually quite famous.
 
 ![Fenway Scoreboard](https://storage.googleapis.com/afs-prod/media/media:e959506330fd4e5890023c93cfbaac55/800.jpeg)
 
-There are layers upon layers of nested functions within the game of baseball. Your challenge today will be to work through tasks associated with these layers, and ultimately to produce a scoreboard that logs in the console.
+There are layers upon layers of nested functions within the game of baseball.
+Your challenge today will be to work through tasks associated with these layers,
+and ultimately to produce a scoreboard that logs in the console.
 
 ## Instructions
 
@@ -49,7 +57,7 @@ Find the file `index.js` and complete all tasks.
 Open a second terminal inside of your project by clicking on the split terminal icon
 ![alt text](assets/split_terminal.png "Split Terminal")
 
-Inside of your second terminal type `npm start` 
+Inside of your second terminal type `npm start`
 ![alt text](assets/npm_start.png "type npm start")
 
 You will be running your tests in one terminal and debugging in the other. As you work on your code you should make use of `console.log` to check your progress and debug.
@@ -61,6 +69,9 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+closure could be defined as the limits or boundaries that a function makes in regards
+to variables, how they are accessed and how they are used.
+Closure is created as soon as a function is instantiated.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -82,8 +93,22 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+the closure in the code is in the function of personalDice.
+I can tell because the function is creating a random dice roll which is then
+referenced by calling that function or creating I guess what could be called a type
+of object. Not an object in the... data formatting sense but an object in that
+it is a thing that is being created.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+what is the same is the calling or the use of the function. The very instantiation of the
+function. The thing that changes it the numerical digits of the dice roll.
+You can change the names that go into the function being called or you can create
+new variables for different people that can be rolling dice.
+
+c. What is the lexical scope of `newRoll`?
+the lexical scope of newRoll is the function personalDice.
+or rather... it's the instantiation of the function personalDice.
+Every time that function is run or called newRoll is then put into action.
 
 
 ### Task 3 - Stretch Goals

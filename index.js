@@ -79,21 +79,15 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks
 below
 */
-var randomNumber = 0;
 
-function inning(rando){
+
+
+function inning(){
     rando = Math.floor(Math.random() * 3);
     return rando;
 }
 
-emptyArray = [];
 
-for (let i = 0; i < 100; i++){
-  // console.log(inning(randomNumber));
-  emptyArray.push(inning(randomNumber));
-}
-console.log(emptyArray);
-console.log(randomNumber);
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
@@ -116,19 +110,38 @@ Use the finalScore function below to do the following:
 }
 */
 
-function finalScore(funkyton, num){
-  homeTeam = 0;
-  awayTeam = 0;
-  for (let i = 0; i < num; i++){
+let playBall = inning();
 
+function finalScore(funkyton, num){
+  var randomNumber = null;
+  var innings = {
+    homeTeam: 0,
+    awayTeam: 0,
   }
+  outs = 0;
+  for (let i = 0; i < num; i++){
+    randomNumber = funkyton;
+      if (randomNumber === 1){
+      innings.homeTeam = innings.homeTeam + 1;
+    } else if (randomNumber === 2){
+      innings.awayTeam = innings.awayTeam + 1;
+    } else {
+      outs += 1;
+    }
+  }
+  console.log(innings);
+  return innings;
 }
+
+  finalScore(playBall, 10);
 
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
-  1. Receive a callback function in a parameter - you will pass in the inning function from task 2 as your argument
-  2. Return an object with a score for home and a score for away that populates from invoking the inning callback function
+  1. Receive a callback function in a parameter - you will pass in the inning
+  function from task 2 as your argument
+  2. Return an object with a score for home and a score for away that
+  populates from invoking the inning callback function
 
 For example: invoking getInningScore(inning) might return this object:
 {
