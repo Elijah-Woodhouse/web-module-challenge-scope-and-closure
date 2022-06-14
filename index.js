@@ -117,8 +117,8 @@ function finalScore(funkyton, num){
   }
 
     return {
-      home: homeScore,
-      away: awayScore
+      Home: homeScore,
+      Away: awayScore
     }
 }
 
